@@ -1,0 +1,101 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 30px;
+}
+.wrap {
+  background: rgb(190, 185, 150);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border: 2px solid rgb(125, 137, 125);
+  box-shadow: 1px 2px 0.5px 2px rgb(54, 67, 54);
+}
+.ctn-add {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding: 4px;
+   border: 1px solid rgb(115, 139, 124);
+   box-shadow: 1px 2px 1px 1px rgb(103, 127, 103);
+   background: #f0f0f0;
+}
+#input{
+   background: rgb(205, 218, 209);
+   padding: 6px;
+   
+}&
+.btn-add{
+  padding: 6px;
+}
+
+.ctn-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 1px 1px 1px 1px rgb(90, 101, 93);
+}
+.ctn-list > ul {
+  list-style: decimal; /* outside par défaut */
+  margin: 0;
+  padding-left: 1rem; /* espace pour les numéros */
+  width: 100%;
+  
+}
+
+.ctn-suppr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(205, 218, 209);
+  color: red;
+  width: 200px;
+  height: auto;
+  padding: 6px;
+  border: 1px solid black;
+  
+  box-shadow: inset 0 0 0 1px #848e85,
+              0.5px 1px 0px 1px rgb(86, 95, 88);
+}
+
+
+#clrBtn {
+  background: rgba(234, 77, 77, 0.7);
+  padding: 4px;
+  font-weight: lighter;
+}
+.actions {
+  background: rgb(184, 184, 184);
+  padding: 50px;
+}
