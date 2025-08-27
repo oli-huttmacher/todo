@@ -78,4 +78,3 @@ clrBtn.addEventListener("click", (e) => {
   render();
 });
 render();
-
