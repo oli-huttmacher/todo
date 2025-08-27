@@ -79,7 +79,3 @@ clrBtn.addEventListener("click", (e) => {
 });
 render();
 
-const valid = {
-  text: name;
-  done: false;
-}

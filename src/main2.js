@@ -1,45 +1,45 @@
-import './style.css'
-import { registerSW } from 'virtual:pwa-register'
+// import './style.css'
+// import { registerSW } from 'virtual:pwa-register'
 
-// Enregistre le Service Worker (installable + offline)
-registerSW({ immediate: true })
+// // Enregistre le Service Worker (installable + offline)
+// registerSW({ immediate: true })
 
-// Références DOM (sans helpers)
-const form     = document.getElementById('form')
-const input    = document.getElementById('task')
-const list     = document.getElementById('list')
-const clearBtn = document.getElementById('clear')
-const countEl  = document.getElementById('count')
+// // Références DOM (sans helpers)
+// const form     = document.getElementById('form')
+// const input    = document.getElementById('task')
+// const list     = document.getElementById('list')
+// const clearBtn = document.getElementById('clear')
+// const countEl  = document.getElementById('count')
 
-// Données (offline via localStorage)
-const STORAGE_KEY = 'pwa-todos-v1'
-let todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+// // Données (offline via localStorage)
+// const STORAGE_KEY = 'pwa-todos-v1'
+// let todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
 
-function save() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
-  render()
-}
+// function save() {
+//   localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
+//   render()
+// }
 
-function escapeHtml(s) {
-  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
-}
+// function escapeHtml(s) {
+//   return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
+// }
 
-function render() {
-  list.innerHTML = ''
-  todos.forEach((t, i) => {
-    const li = document.createElement('li')
-    li.className = 'item'
-    li.innerHTML = `
-      <label class="row">
-        <input type="checkbox" ${t.done ? 'checked' : ''} data-i="${i}" class="toggle" />
-        <span class="txt ${t.done ? 'done' : ''}">${escapeHtml(t.text)}</span>
-      </label>
-      <button class="del" data-i="${i}" title="Supprimer">✕</button>
-    `
-    list.appendChild(li)
-  })
-  countEl.textContent = `${todos.length} tâche(s)`
-}
+// function render() {
+//   list.innerHTML = ''
+//   todos.forEach((t, i) => {
+//     const li = document.createElement('li')
+//     li.className = 'item'
+//     li.innerHTML = `
+//       <label class="row">
+//         <input type="checkbox" ${t.done ? 'checked' : ''} data-i="${i}" class="toggle" />
+//         <span class="txt ${t.done ? 'done' : ''}">${escapeHtml(t.text)}</span>
+//       </label>
+//       <button class="del" data-i="${i}" title="Supprimer">✕</button>
+//     `
+//     list.appendChild(li)
+//   })
+//   countEl.textContent = `${todos.length} tâche(s)`
+// }
 
 // Events
 form.addEventListener('submit', (e) => {
