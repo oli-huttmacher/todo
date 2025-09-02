@@ -101,28 +101,28 @@ form {
   padding: 50px;
 }
 .list-name {
-  width: 200px;
-  height: auto;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-
-  color: rgb(14, 179, 31);
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  /* height: auto; */
 }
-li{
-    display: flex;
+.list-name {
+  display: flex;
   justify-content: space-between; /* met label à gauche et bouton X à droite */
-  align-items: center;            /* centre verticalement */
+  align-items: center; /* centre verticalement */
   padding: 6px 10px;
   border-bottom: 1px solid #ccc;
 }
-li label {
+.list-name label {
   display: flex;
   align-items: center;
   gap: 8px; /* espace entre la case et le texte */
 }
-li button {
+.list-name button {
   background: #e74c3c;
   color: white;
   border: none;
@@ -132,6 +132,10 @@ li button {
   transition: background 0.2s;
 }
 
-li button:hover {
+.list-name button:hover {
   background: #c0392b;
+}
+.done {
+  color: rgb(203, 194, 194);
+  text-decoration: line-through;
 }
